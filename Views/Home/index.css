@@ -1,0 +1,30 @@
+﻿.image {
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+h1 {
+    margin-right: 170px;
+    margin-left: 170px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+}
+Nav {
+    Width: 150px;
+    border: 2px #8c014c;
+    background-color : #8c014c ; 
+    color : white;
+}
+
+Li {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+a {
+    color: chocolate;
+}
+
