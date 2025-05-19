@@ -14,9 +14,10 @@ h1 {
 }
 Nav {
     Width: 150px;
-    border: 2px #8c014c;
-    background-color : #8c014c ; 
-    color : white;
+    border: 2px solid #8c014c;
+    background-color: #8c014c; 
+    color: white;
+    float: left;
 }
 
 Li {
@@ -27,4 +28,8 @@ Li {
 a {
     color: chocolate;
 }
+section {
+    margin-left: 170px;
+}
+
 

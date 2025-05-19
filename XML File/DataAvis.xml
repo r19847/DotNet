@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<row>
+		<LastName>Dupont</LastName>
+		<FirstName>Annie</FirstName>
+		<OpinionGiven>O</OpinionGiven>
+	</row>
+	<row>
+		<LastName>Dupuis</LastName>
+		<FirstName>Barnabé</FirstName>
+		<OpinionGiven>N</OpinionGiven>
+	</row>
+	<row>
+		<LastName>Martin</LastName>
+		<FirstName>Gaëlle</FirstName>
+		<OpinionGiven>O</OpinionGiven>
+	</row>
+</root>

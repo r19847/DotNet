@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirmation - HN TP LOCAL</title>
+    <link rel="stylesheet" href="~/resources/index.css" />
+</head>
+    <body>
+        <header>
+            <img src="~/resources/GroupeHN.png" class="image" alt="GroupeHN" />
+            <h1>Confirmation du formulaire</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="/Home/Index">Accueil</a></li>
+                <li><a href="/Home/AvisList">Liste avis</a></li>
+            </ul>
+        </nav>
+        <section>
+            <h2 style="text-align: center;">Votre formulaire a bien été pris en compte</h2>
+
+            <table>
+                <tr>
+                    <th colspan="2">Informations personnelles</th>
+                </tr>
+                <tr>
+                    <td>Nom</td>
+                    <td>@Model.Nom</td>
+                </tr>
+                <tr>
+                    <td>Prénom</td>
+                    <td>@Model.Prenom</td>
+                </tr>
+                <tr>
+                    <td>Sexe</td>
+                    <td>@Model.Genre</td>
+                </tr>
+                <tr>
+                    <td>Adresse</td>
+                    <td>@Model.Adresse</td>
+                </tr>
+                <tr>
+                    <td>Code postal</td>
+                    <td>@Model.CodePostal</td>
+                </tr>
+                <tr>
+                    <td>Ville</td>
+                    <td>@Model.Ville</td>
+                </tr>
+                <tr>
+                    <td>Adresse mail</td>
+                    <td>@Model.Email</td>
+                </tr>
+            </table>
+
+            <table>
+                <tr>
+                    <th colspan="2">Informations formation suivie</th>
+                </tr>
+                <tr>
+                    <td>Date début formation</td>
+                    <td>@Model.DateDebut.ToString("dd/MM/yyyy")</td>
+                </tr>
+                <tr>
+                    <td>Formation suivie</td>
+                    <td>@Model.TypeFormation</td>
+                </tr>
+            </table>
+
+            <table>
+                <tr>
+                    <th colspan="2">Avis sur la formation</th>
+                </tr>
+                <tr>
+                    <td>Formation Cobol</td>
+                    <td>@Model.CobolFormation</td>
+                </tr>
+                <tr>
+                    <td>Formation C#</td>
+                    <td>@Model.CSharpFormation</td>
+                </tr>
+            </table>
+
+        </section>
+    </body>
+</html>

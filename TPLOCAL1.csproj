@@ -6,4 +6,20 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Controllers\HomeController.cs" />
+    <Compile Remove="Views\Home\AvisList.cs" />
+    <Compile Remove="Views\Home\Class.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Home\Index1.cshtml" />
+    <Content Remove="wwwroot\resources\DataAvis.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\resources\DataAvis.xml" />
+    <None Include="wwwroot\resources\index.css" />
+  </ItemGroup>
+
 </Project>

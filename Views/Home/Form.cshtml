@@ -1,0 +1,101 @@
+﻿<html>
+    <head>
+          <title>HN - TP LOCAL</title>
+	      <link rel="stylesheet" href="~/resources/index.css" />
+    </head>    
+    <body>
+        <header>
+            <img src="~/resources/GroupeHN.png" class="image" alt="GroupeHN" />
+            <h1>Formulaire TP HN avis</h1>
+    
+        </header>
+        <nav>
+            <ul>
+                <li><a href="/Home/Index/Index">Accueil</a></li>
+                <li><a href="/Home/Index/AvisList">Liste avis</a></li> 
+            </UL>
+        </nav>
+        <section>
+            <form id="personalInfoForm" action="/Home/Index/Submit" method="post">
+                <table>
+                    <tr>
+                        <th colspan="2">Informations personnelles</th>
+                    </tr>
+                    <tr>
+                        <td><label for="nom">Nom</label></td>
+                        <td><input type="text" id="nom" name="nom" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="prenom">Prénom</label></td>
+                        <td><input type="text" id="prenom" name="prenom" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="genre">Sexe</label></td>
+                        <td>
+                            <select id="genre" name="genre" required>
+                                <option value="" selected>Selectionner un sexe</option>
+                                <option value="Homme">Homme</option>
+                                <option value="Femme">Femme</option>
+                                <option value="Autre">Autre</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="adresse">Adresse</label></td>
+                        <td><input type="text" id="adresse" name="adresse" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="codePostal">Code postal</label></td>
+                        <td><input type="text" id="codePostal" name="codePostal" pattern="[0-9]{5}" title="Le code postal doit contenir 5 chiffres" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="ville">Ville</label></td>
+                        <td><input type="text" id="ville" name="ville" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Adresse mail</label></td>
+                            <td><input type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+\-]+@@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" title="Veuillez entrer une adresse email valide (ex. : nom@domaine.com)" required></td>
+                    </tr>
+                </table>
+
+                  <table>
+                    <tr>
+                        <th colspan="2">Informations formation suivie</th>
+                    </tr>
+                    <tr>
+                        <td><label for="dateDebut">Date début formation</label></td>
+                        <td><input type="date" id="dateDebut" name="dateDebut" max="2020-12-31" title="La date doit être antérieure au 01/01/2021" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="typeFormation">Formation suivie</label></td>
+                        <td>
+                            <select id="typeFormation" name="typeFormation" required>
+                                <option value="" selected>Selectionner une formation</option>
+                                <option value="Cobol">Formation Cobol</option>
+                                <option value="ParObjet">Formation par objet</option>
+                                <option value="DoubleCompetence">Formation à double compétence</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+
+                 <table>
+                <tr>
+                    <th colspan="2">Avis sur la formation</th>
+                </tr>
+                <tr>
+                    <td><label for="cobolFormation">Formation Cobol</label></td>
+                    <td><input type="text" id="cobolFormation" name="cobolFormation" required></td>
+               </tr>
+               <tr>
+                    <td><label for="csharpFormation">Formation C#</label></td>
+                    <td><input type="text" id="csharpFormation" name="csharpFormation" required></td>
+               </tr>
+            </table>
+
+                <button type="submit">Validation</button>
+
+            </form>
+        </section>
+    </body>
+</html>

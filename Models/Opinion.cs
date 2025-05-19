@@ -76,5 +76,21 @@ namespace TPLOCAL1.Models
         /// Review given (Possible values: O or N)
         /// </summary>
         public string OpinionGiven { get; set; }
+        public string AvisFormate
+        {
+            get
+            {
+                return OpinionGiven == "O" ? "Oui" : "Non";
+            }
+        }
+
+        // Propriété calculée pour déterminer la couleur selon les règles
+        public string CouleurAvis
+        {
+            get
+            {
+                return OpinionGiven == "O" ? "avis-positif" : "avis-negatif";
+            }
+        }
     }
 }

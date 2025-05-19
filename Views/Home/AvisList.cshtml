@@ -1,0 +1,67 @@
+﻿@model List<TPLOCAL1.Models.Opinion>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>HN - TP LOCAL</title>
+    <link rel="stylesheet" href="~/resources/index.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <style>
+        .avis-positif {
+            background-color: green;
+            color: black;
+        }
+
+        .avis-negatif {
+            background-color: red;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="~/resources/GroupeHN.png" class="image" alt="GroupeHN" />
+        <h1>Liste des avis</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/Home/Index/Index">Accueil</a></li>
+            <li><a href="/Home/Index/AvisList">Liste avis</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <div class="container mt-4">
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th colspan="3" class="text-center">Liste</th>
+                    </tr>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Avis donné</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var avis in Model)
+                    {
+                        <tr>
+                            <td>@avis.LastName</td>
+                            <td>@avis.FirstName</td>
+                            <td class="@avis.CouleurAvis">
+                                @avis.AvisFormate
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
