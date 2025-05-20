@@ -42,7 +42,7 @@ public class HomeController : Controller
         {
             // Stocker les données du formulaire dans la variable statique
             _formData = formData;
-            // Rediriger vers la page de validation
+            // Rediriger vers la page de la validation
             return RedirectToAction("Index", new { id = "Confirmation" });
         }
         return View(id, formData);
